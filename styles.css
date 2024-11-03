@@ -1,0 +1,330 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #f4f4f9;
+    line-height: 1.6;
+}
+/* styles.css */
+
+/* Preloader styles */
+#preloader {
+    position: fixed; /* Keep it fixed on the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it stays on top */
+}
+
+#preloader img {
+    width: 150px; /* Adjust as necessary for your logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.loading {
+    margin-top: 20px;
+    font-size: 24px; /* Font size for loading text */
+    font-weight: bold;
+}
+
+/* Hide preloader after page load */
+body.loaded #preloader {
+    display: none; /* Hide preloader once page is loaded */
+}
+
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
+    top: 0;
+    width: 100%; /* Ensures it covers the full width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure header is positioned correctly */
+    z-index: 1000; /* Ensure the header is above other content */
+}
+.signup-container {
+    padding: 0px; /* Padding for the sign-up container */
+    max-width: 4400px; /* Optional: to control the width */
+    margin: 0 auto; /* Centering the container */
+    border: 1px solid #ddd; /* Optional: border around the container */
+    border-radius: 5px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: background color */
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+}
+
+header {
+    background-color: #333; /* Example background color */
+    padding: 10px; /* Add some padding */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+    display: inline; /* Display items in a row */
+    margin-right: 20px; /* Space between links */
+}
+
+nav ul li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Add active class style if needed */
+nav ul li a.active {
+    font-weight: bold; /* Bold for active link */
+    color: rgb(255, 255, 255); /* Change color for active link */
+}
+
+
+/* Hero Section */
+.hero {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    margin-top: 70px; /* Adjust based on header height */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+}
+
+.hero-content p {
+    margin: 1rem 0;
+}
+
+.cta-btn {
+    background: teal;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* How It Works */
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.step {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+}
+
+.step span {
+    font-size: 2rem;
+    color: teal;
+}
+
+/* Features Section */
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.feature {
+    background: teal;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 150px;
+}
+
+/* Benefits Section */
+.benefits-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.benefits-grid div {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+}
+
+/* CTA Banner */
+.cta-banner {
+    background: teal;
+    color: white;
+    padding: 2rem;
+}
+
+.cta-banner h2 {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #ddd;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+.dark-theme .hero {
+    background-color: #222;
+}
+
+.dark-theme .cta-btn,
+.dark-theme .feature,
+.dark-theme .cta-banner {
+    background-color: #005f5f;
+}
+.signup-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.signup-container h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#signup-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#signup-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.message {
+    margin-top: 10px;
+    text-align: center;
+    color: red; /* Error messages in red */
+}
+.join-us-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 15px; /* Adjust spacing */
+    transition: background-color 0.3s;
+}
+
+.join-us-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.social-links {
+    margin-bottom: 10px;
+    text-align: center; /* Center the social links in the footer */
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 32px; /* Set icon width */
+    height: 32px; /* Set icon height */
+    transition: transform 0.3s; /* Add transition for scaling */
+}
+
+.social-links a:hover img {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.footer {
+    background-color: #333; /* Set footer background color */
+    padding: 20px; /* Add padding to footer */
+    text-align: center; /* Center the text in the footer */
+}

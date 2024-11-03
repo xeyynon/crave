@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order & Tracking - Crave</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="preloader">
+        <img src="logo.png" alt="Crave Logo"> <!-- Adjust the path to your logo -->
+        <div class="loading">Loading...</div>
+    </div>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo" id="ohead">
+      <a href="index.html"><img src="logo.png" alt="Crave Logo"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="signup.html">Join as Delivery Partner</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="https://www.vitap.ac.in/cafeteria">Know More About cafeteria</a></li> <!-- Link to Order Now -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Order Placement Section -->
+  <section id="order-placement" class="section">
+    <h2>Place Your Order</h2>
+    <div class="food-selection">
+      <h3>Select Location FS/RP</h3>
+      <select id="fsrp" onchange="loadVendors()">
+        <option value="">FS/RP/M</option>
+        <option value="Rock Plaza">Rock Plaza</option>
+        <option value="Food Street">Food Street</option>
+        <option value="Maggie Hotspot">Maggie Hotspot</option>
+      </select>
+
+      <div id="vendor-selection" style="display:none;">
+        <h3>Select Vendor</h3>
+        <select id="vendor" onchange="loadMenu()">
+          <option value="">Select a vendor</option>
+        </select>
+      </div>
+
+      <div id="menu-selection" style="display:none;">
+        <h3>Select Menu Items</h3>
+        <ul id="menu-list"></ul>
+      </div>
+
+      <select id="hostel-location">
+        <option value="">Select Your Hostel</option>
+        <option value="MH 2">MH 2</option>
+        <option value="MH 3">MH 3</option>
+        <option value="MH 4">MH 4 </option>
+        <option value="MH 5">MH 5</option>
+        <option value="LH 1">LH 1</option>
+        <option value="LH 2">LH 2</option>
+        <option value="LH 3">LH 3</option>
+        <option value="LH 4">LH 4</option>
+        <option value="CB">CB</option>
+      </select>
+      <button id="confirm-order-btn">Confirm Order</button>
+    </div>
+  </section>
+
+  <!-- Order Summary Section -->
+  <section id="order-summary" class="section" style="display:none;">
+    <h2>Order Summary</h2>
+    <div id="summary-details"></div>
+    <div>
+      <p>Estimated Delivery Fee: $<span id="delivery-fee">2.00</span></p>
+      <button id="place-order-btn">Place Order</button>
+    </div>
+    <p id="order-confirmation" style="display:none;">Your order number is <span id="order-number"></span>. Estimated delivery time: <span id="delivery-time"></span>.</p>
+  </section>
+
+  <!-- Order Tracking Section -->
+  <section id="order-tracking" class="section" style="display:none;">
+    <h2>Order Tracking</h2>
+    <div class="tracking-status">
+      <div id="status-bar">
+        <div class="status-item">Order Placed</div>
+        <div class="status-item">Preparing</div>
+        <div class="status-item">Out for Delivery</div>
+        <div class="status-item">Delivered</div>
+      </div>
+      <div id="current-status">Current Status: <span id="current-status-text">Order Placed</span></div>
+    </div>
+  </section>
+
+  <!-- Live Chat/Help Section -->
+  <section id="help" class="section">
+    <h2>Need Help?</h2>
+    <div class="chat-icon" onclick="openChat()">💬</div> <!-- Live chat icon -->
+  </section>
+
+  <!-- User Profile/Settings Section -->
+  <section id="user-profile" class="section">
+    <h2>Your Profile</h2>
+    <button onclick="showProfileSettings()">Edit Profile</button>
+    <button onclick="viewOrderHistory()">Order History</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="social-links">
+        <a href="https://www.instagram.com/pratiksurya/" target="_blank">
+            <img src="https://i.ibb.co/hXm6Ysq/igr.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/suryapratik/" target="_blank">
+            <img src="https://i.ibb.co/pwxyHGx/lnr.png" alt="LinkedIn">
+        </a>
+        <a href="mailto:suryapratik12@gmail.com">
+            <img src="https://i.ibb.co/qmSSJBQ/mlr.png" alt="Gmail">
+        </a>
+    </div>
+    <p>Copyright © 2024 Developed by Surya Pratik. All Rights Reserved.</p>
+  </footer>
+
+<script src="preloader.js"></script> <!-- Link to your preloader JS file -->
+</body>
+</html>
