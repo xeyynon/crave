@@ -113,6 +113,33 @@ nav ul li a.active {
     padding: 4rem 2rem;
     position: relative;
     margin-top: 70px; /* Adjust based on header height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+.hero-logo {
+    width: 510px; /* Set a default size for the logo */
+    max-width: 100%; /* Logo will not exceed the screen width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px;
+    transition: width 0.3s ease; /* Smooth resizing */
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 600px) {
+    .hero-logo {
+        width: 100px; /* Smaller size for mobile */
+    }
+
+    .hero h1 {
+        font-size: 1.8em; /* Adjust font size for better readability */
+    }
+
+    .hero p {
+        font-size: 1em; /* Adjust font size for better readability */
+    }
 }
 
 .hero-content h1 {
