@@ -1,412 +1,168 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crave - Campus Food Delivery</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
 
-body {
-    color: #222;
-    background: linear-gradient(90deg, #ffde59, #ff914d); /* Light bluish background */
-    line-height: 1.6;
-}
-/* styles.css */
+  <!-- Navigation Bar -->
+  <header>
+    <div id="preloader">
+        <img src="logo.png" alt="Crave Logo"> <!-- Adjust the path to your logo -->
+        <div class="loading">Loading...</div>
+    </div>
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="Crave Logo"></a>
+    </div>
+    <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#how-it-works" aria-label="Learn how it works">How It Works</a></li>
+          <li><a href="#features" aria-label="View features">Features</a></li>
+          <li><a href="signup.html" aria-label="Join as a delivery partner">Join as Delivery Partner</a></li>
+          <li><a href="#faq" aria-label="Frequently asked questions">FAQ</a></li>
+        </ul>
+      </nav>
+  </header>
 
-/* Preloader styles */
-#preloader {
-    position: fixed; /* Keep it fixed on the screen */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.9);  /* Light background for contrast */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Ensure it stays on top */
-}
+  <!-- Hero Section -->
+  <section class="hero">
+    
+    <div class="hero-content">
+      <img src="logo.png" alt="Crave Logo" class="hero-logo">
+      <h1>Your Campus Food, Delivered by Peers</h1>
+      <p>Easier, faster, and cheaper food delivery, exclusively for students.</p>
+      <button class="button cta-btn" onclick="window.location.href='order.html'">Order Now</button>
 
-#preloader img {
-    width: 150px; /* Adjust as necessary for your logo */
-    height: auto; /* Maintain aspect ratio */
-}
+      <a href="signup.html" class="button join-us-btn">Join Us</a>
+    </div>
+  </section>
 
-.loading {
-    margin-top: 20px;
-    font-size: 24px; /* Font size for loading text */
-    font-weight: bold;
-    color: #0097b2;
-}
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Crave</h2>
+    <p>Crave is a peer-to-peer, student-driven food delivery system designed to make food delivery convenient and affordable for students.</p>
+  </section>
 
-/* Hide preloader after page load */
-body.loaded #preloader {
-    display: none; /* Hide preloader once page is loaded */
-}
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="section">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <span>1</span>
+        <p>Place Your Order</p>
+      </div>
+      <div class="step">
+        <span>2</span>
+        <p>Nearby Students Accept</p>
+      </div>
+      <div class="step">
+        <span>3</span>
+        <p>Fast Delivery</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <h2>Features</h2>
+    <div class="feature-list">
+      <div class="feature">Order Tracking</div>
+      <div class="feature">Same-Hostel Matching</div>
+      <div class="feature">Low Fees</div>
+      <div class="feature">Flexible Earning Opportunity</div>
+    </div>
+  </section>
 
-/* Header Styles */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 30px;
-    background-color: #0097b2; /* Semi-transparent */
-    color: white;
-    top: 0;
-    width: 100%; /* Ensures it covers the full width */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative; /* Ensure header is positioned correctly */
-    z-index: 1000; /* Ensure the header is above other content */
-}
-.signup-container {
-    padding: 0px; /* Padding for the sign-up container */
-    max-width: 4400px; /* Optional: to control the width */
-    margin: 0 auto; /* Centering the container */
-    border: 1px solid #ddd; /* Optional: border around the container */
-    border-radius: 5px; /* Optional: rounded corners */
-    background-color: #f9f9f9; /* Optional: background color */
-}
+  <!-- Benefits Section -->
+  <section id="benefits" class="benefits">
+    <h2>Benefits</h2>
+    <div class="benefits-grid">
+      <div>
+        <h3>For Food Orderers</h3>
+        <ul>
+          <li>Convenience</li>
+          <li>Fast delivery</li>
+        </ul>
+      </div>
+      <div>
+        <h3>For Deliverers</h3>
+        <ul>
+          <li>Easy earnings</li>
+          <li>Flexible schedules</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-.logo img {
-    height: 50px; /* Adjust as needed */
-}
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section">
+    <h2>Testimonials</h2>
+    <div class="testimonials">
+      <blockquote>"Crave makes it so much easier to get food during late study sessions!"</blockquote>
+      <blockquote>"Finally, a way to earn some cash while helping my hostel mates!"</blockquote>
+      <blockquote>"Fast delivery and I didn’t have to step out!"</blockquote>
+    </div>
+  </section>
 
-header {
-    background-color: #333; /* Example background color */
-    padding: 10px; /* Add some padding */
-}
+  <!-- Real-Time Order Tracking Section -->
+  <section id="order-tracking" class="section">
+    <h2>Real-Time Order Tracking</h2>
+    <p>Track your order in real-time as it moves from pickup to your hostel.</p>
+    <div class="map-placeholder">[Map Tracking Simulation]</div>
+  </section>
 
-nav ul {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-}
+  <!-- Market Validation Section -->
+  <section id="market-validation" class="section">
+    <h2>Why Crave?</h2>
+    <p>Studies show 80% of students prefer campus-based delivery. Crave meets this need with an easy-to-use, peer-driven model.</p>
+  </section>
 
-nav ul li {
-    display: inline; /* Display items in a row */
-    margin-right: 20px; /* Space between links */
-}
+  <!-- Join as Delivery Partner Section -->
+  <section id="join-delivery" class="section cta-section">
+    <h2>Become a Delivery Partner</h2>
+    <p>Earn as you deliver within your own campus. Sign up today!</p>
+    <a href="signup.html" class="button join-us-btn">Sign Up to Deliver</a>
+  </section>
 
-nav ul li a {
-    color: #ffde59;
-    text-decoration: none; /* Remove underline */
-}
+  
+  <!-- FAQs Section -->
+  <section id="faq" class="section">
+    <h2>FAQs</h2>
+    <details>
+      <summary>How much does delivery cost?</summary>
+      <p>Crave offers transparent, low fees designed for students.</p>
+    </details>
+    <details>
+      <summary>Who can order and deliver food?</summary>
+      <p>All students on campus can place orders and become delivery partners.</p>
+    </details>
+    <details>
+      <summary>Is my information safe with Crave?</summary>
+      <p>We prioritize your privacy and secure your data.</p>
+    </details>
+  </section>
 
-nav ul li a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
+<!-- Footer -->
+<footer class="footer">
+  <div class="social-links">
+      <a href="https://www.instagram.com/pratiksurya/" target="_blank">
+          <img src="https://i.ibb.co/hXm6Ysq/igr.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/in/suryapratik/" target="_blank">
+          <img src="https://i.ibb.co/pwxyHGx/lnr.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:suryapratik12@gmail.com">
+          <img src="https://i.ibb.co/qmSSJBQ/mlr.png" alt="Gmail">
+      </a>
+  </div>
+  <p>Copyright © 2024 Developed by Surya Pratik. All Rights Reserved.</p>
+</footer>
 
-/* Add active class style if needed */
-nav ul li a.active {
-    font-weight: bold; /* Bold for active link */
-    color: rgb(255, 255, 255); /* Change color for active link */
-}
-
-
-/* Hero Section */
-.hero {
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #222;
-    text-align: center;
-    padding: 4rem 2rem;
-    position: relative;
-    margin-top: 70px; /* Adjust based on header height */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-}
-.hero-logo {
-    width: 510px; /* Set a default size for the logo */
-    max-width: 100%; /* Logo will not exceed the screen width */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 20px;
-    transition: width 0.3s ease; /* Smooth resizing */
-}
-
-/* Responsive adjustments for mobile screens */
-@media (max-width: 600px) {
-    .hero-logo {
-        width: 100px; /* Smaller size for mobile */
-    }
-
-    .hero h1 {
-        font-size: 1.8em; /* Adjust font size for better readability */
-    }
-
-    .hero p {
-        font-size: 1em; /* Adjust font size for better readability */
-    }
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-}
-
-.hero-content p {
-    margin: 1rem 0;
-}
-
-.cta-btn {
-    background: #333; 
-    color: rgb(255, 255, 255);
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s, border-bottom 0.3s;
-    padding: 0.5em;
-}
-
-.theme-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: transparent;
-    color: #ffde59;
-    font-size: 1.5rem;
-    border: none;
-    cursor: pointer;
-}
-
-/* Sections */
-section {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-/* How It Works */
-.steps {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.step {
-    background: linear-gradient(360deg, #fb6202, #f7e499); 
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 150px;
-}
-
-.step span {
-    font-size: 2rem;
-    color: #ff914d;
-}
-
-/* Features Section */
-.feature-list {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.feature {
-    background: linear-gradient(18deg, #fb6202, #f7e499); 
-    color: rgb(0, 0, 0);
-    padding: 1rem;
-    border-radius: 8px;
-    width: 150px;
-}
-
-/* Benefits Section */
-.benefits-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.benefits-grid div {
-    background: linear-gradient(360deg, #fb6202, #f7e499); 
-    padding: 1rem;
-    border-radius: 8px;
-    width: 250px;
-}
-
-/* CTA Banner */
-.cta-banner {
-    background: #ff914d;
-    color: rgb(101, 61, 61);
-    padding: 2rem;
-}
-
-.cta-banner h2 {
-    margin-bottom: 1rem;
-}
-
-/* Footer */
-.footer {
-    background: #0097b2; 
-    color: #e8eaf6;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer a {
-    color: #5ce1e6;
-    margin: 0 0.5rem;
-    text-decoration: none;
-}
-
-/* Dark Theme */
-.dark-theme {
-    background-color: #121212;
-    color: #f5f5f5;
-}
-
-.dark-theme .hero {
-    background-color: #1c1c1c;
-}
-
-.dark-theme .cta-btn,
-.dark-theme .feature,
-.dark-theme .cta-banner {
-    background-color: #ff5757;
-}
-.signup-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.signup-container h1 {
-    text-align: center;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#signup-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745; /* Green background */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#signup-btn:hover {
-    background-color: #218838; /* Darker green on hover */
-}
-
-.message {
-    margin-top: 10px;
-    text-align: center;
-    color: red; /* Error messages in red */
-}
-.join-us-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333; /* Bootstrap primary color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 15px; /* Adjust spacing */
-    transition: background-color 0.3s;
-}
-
-.join-us-btn:hover {
-    background-color: #ff914d; /* Darker blue on hover */
-}
-
-.social-links {
-    margin-bottom: 10px;
-    text-align: center; /* Center the social links in the footer */
-}
-
-.social-links a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.social-links img {
-    width: 32px; /* Set icon width */
-    height: 32px; /* Set icon height */
-    transition: transform 0.3s; /* Add transition for scaling */
-}
-
-.social-links a:hover img {
-    transform: scale(1.2); /* Scale up on hover */
-}
-
-.footer {
-    background-color: #333; /* Set footer background color */
-    padding: 20px; /* Add padding to footer */
-    text-align: center; /* Center the text in the footer */
-}
-/* Hover and Active Styles to Match Other Links */
-.cta-btn:hover {
-    color: #ff914d; /* Matches hover color for other nav links */
-    border-bottom: 2px solid #ff914d; /* Underline for hover effect */
-}
-
-.cta-btn.active {
-    color: #ff5757; /* Matches active link color */
-    border-bottom: 2px solid #ff5757;
-}
-/* Universal Button Style */
-.button {
-    background-color: #333; /* Main button background color */
-    color: #ffde59; /* Text color consistent with other links */
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-bottom 0.3s;
-    text-decoration: none; /* Ensure text-decoration is removed */
-    display: inline-block; /* Ensures buttons don’t collapse in flex layouts */
-}
-
-/* Hover and Active States */
-.button:hover {
-    background-color: #ff914d; /* Darker shade for hover effect */
-    color: #ffffff; /* Light text for contrast on hover */
-    border-bottom: 2px solid #ff914d; /* Underline for hover effect */
-}
-
-.button:active, .button.active {
-    background-color: #ff5757; /* Active color for consistent styling */
-    border-bottom: 2px solid #ff5757; /* Darker underline on active state */
-    color: #ffffff;
-}
-
-/* Specific Overrides for Pre-existing Button Classes */
-.cta-btn,
-.join-us-btn,
-#signup-btn,
-.button-link {
-    @extend .button; /* Apply base .button styles */
-}
-
-/* Ensure Sign-Up Button Matches Styling */
-#signup-btn {
-    width: 100%; /* Full-width for form button */
-}
+  <script src="preloader.js"></script> <!-- Link to your preloader JS file -->
+  
+</body>
+</html>
