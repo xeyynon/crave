@@ -7,8 +7,8 @@
 }
 
 body {
-    color: #333;
-    background-color: #f4f4f9;
+    color: #222;
+    background: linear-gradient(90deg, #ffde59, #ff914d); /* Light bluish background */
     line-height: 1.6;
 }
 /* styles.css */
@@ -20,7 +20,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    background: rgba(255, 255, 255, 0.9);  /* Light background for contrast */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,6 +37,7 @@ body {
     margin-top: 20px;
     font-size: 24px; /* Font size for loading text */
     font-weight: bold;
+    color: #0097b2;
 }
 
 /* Hide preloader after page load */
@@ -51,7 +52,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 5px 30px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
+    background-color: #0097b2; /* Semi-transparent */
+    color: white;
     top: 0;
     width: 100%; /* Ensures it covers the full width */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -88,7 +90,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Link color */
+    color: #ffde59;
     text-decoration: none; /* Remove underline */
 }
 
@@ -108,7 +110,7 @@ nav ul li a.active {
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
-    color: #000000;
+    color: #222;
     text-align: center;
     padding: 4rem 2rem;
     position: relative;
@@ -151,13 +153,17 @@ nav ul li a.active {
 }
 
 .cta-btn {
-    background: teal;
-    color: white;
+    background: #333; 
+    color: rgb(255, 255, 255);
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding: 0.5em;
 }
 
 .theme-toggle {
@@ -165,7 +171,7 @@ nav ul li a.active {
     top: 1rem;
     right: 1rem;
     background: transparent;
-    color: white;
+    color: #ffde59;
     font-size: 1.5rem;
     border: none;
     cursor: pointer;
@@ -185,7 +191,7 @@ section {
 }
 
 .step {
-    background: white;
+    background: linear-gradient(360deg, #fb6202, #f7e499); 
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -194,7 +200,7 @@ section {
 
 .step span {
     font-size: 2rem;
-    color: teal;
+    color: #ff914d;
 }
 
 /* Features Section */
@@ -205,8 +211,8 @@ section {
 }
 
 .feature {
-    background: teal;
-    color: white;
+    background: linear-gradient(18deg, #fb6202, #f7e499); 
+    color: rgb(0, 0, 0);
     padding: 1rem;
     border-radius: 8px;
     width: 150px;
@@ -220,7 +226,7 @@ section {
 }
 
 .benefits-grid div {
-    background: white;
+    background: linear-gradient(360deg, #fb6202, #f7e499); 
     padding: 1rem;
     border-radius: 8px;
     width: 250px;
@@ -228,8 +234,8 @@ section {
 
 /* CTA Banner */
 .cta-banner {
-    background: teal;
-    color: white;
+    background: #ff914d;
+    color: rgb(101, 61, 61);
     padding: 2rem;
 }
 
@@ -239,32 +245,32 @@ section {
 
 /* Footer */
 .footer {
-    background: #333;
-    color: white;
+    background: #0097b2; 
+    color: #e8eaf6;
     padding: 20px;
     text-align: center;
 }
 
 .footer a {
-    color: #ddd;
+    color: #5ce1e6;
     margin: 0 0.5rem;
     text-decoration: none;
 }
 
 /* Dark Theme */
 .dark-theme {
-    background-color: #333;
-    color: #f4f4f9;
+    background-color: #121212;
+    color: #f5f5f5;
 }
 
 .dark-theme .hero {
-    background-color: #222;
+    background-color: #1c1c1c;
 }
 
 .dark-theme .cta-btn,
 .dark-theme .feature,
 .dark-theme .cta-banner {
-    background-color: #005f5f;
+    background-color: #ff5757;
 }
 .signup-container {
     max-width: 400px;
@@ -318,7 +324,7 @@ section {
 .join-us-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF; /* Bootstrap primary color */
+    background-color: #333; /* Bootstrap primary color */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -327,7 +333,7 @@ section {
 }
 
 .join-us-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #ff914d; /* Darker blue on hover */
 }
 
 .social-links {
@@ -354,4 +360,53 @@ section {
     background-color: #333; /* Set footer background color */
     padding: 20px; /* Add padding to footer */
     text-align: center; /* Center the text in the footer */
+}
+/* Hover and Active Styles to Match Other Links */
+.cta-btn:hover {
+    color: #ff914d; /* Matches hover color for other nav links */
+    border-bottom: 2px solid #ff914d; /* Underline for hover effect */
+}
+
+.cta-btn.active {
+    color: #ff5757; /* Matches active link color */
+    border-bottom: 2px solid #ff5757;
+}
+/* Universal Button Style */
+.button {
+    background-color: #333; /* Main button background color */
+    color: #ffde59; /* Text color consistent with other links */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-bottom 0.3s;
+    text-decoration: none; /* Ensure text-decoration is removed */
+    display: inline-block; /* Ensures buttons don’t collapse in flex layouts */
+}
+
+/* Hover and Active States */
+.button:hover {
+    background-color: #ff914d; /* Darker shade for hover effect */
+    color: #ffffff; /* Light text for contrast on hover */
+    border-bottom: 2px solid #ff914d; /* Underline for hover effect */
+}
+
+.button:active, .button.active {
+    background-color: #ff5757; /* Active color for consistent styling */
+    border-bottom: 2px solid #ff5757; /* Darker underline on active state */
+    color: #ffffff;
+}
+
+/* Specific Overrides for Pre-existing Button Classes */
+.cta-btn,
+.join-us-btn,
+#signup-btn,
+.button-link {
+    @extend .button; /* Apply base .button styles */
+}
+
+/* Ensure Sign-Up Button Matches Styling */
+#signup-btn {
+    width: 100%; /* Full-width for form button */
 }
