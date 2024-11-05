@@ -279,6 +279,7 @@ section {
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
+    background: linear-gradient(180deg, #f48d4d, #ffdc4f);
 }
 
 .signup-container h1 {
@@ -304,8 +305,10 @@ section {
 #signup-btn {
     width: 100%;
     padding: 10px;
-    background-color: #28a745; /* Green background */
-    color: white;
+    background-color: #333; /* Main button background color */
+    color: #ffde59; 
+    font-weight: bold;
+
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -313,7 +316,9 @@ section {
 }
 
 #signup-btn:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #ff914d; /* Darker shade for hover effect */
+    color: #ffffff; /* Light text for contrast on hover */
+    border-bottom: 2px solid #ff914d; /* Underline for hover effect */
 }
 
 .message {
