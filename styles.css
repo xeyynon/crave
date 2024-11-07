@@ -415,3 +415,25 @@ section {
 #signup-btn {
     width: 100%; /* Full-width for form button */
 }
+/* Responsive Embed Container */
+.pdf-container {
+    position: relative;
+    width: 100%;
+    padding-top: 80%; /* Adjusts the aspect ratio */
+  }
+  
+  .pdf-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Media Query for Small Screens */
+  @media (max-width: 600px) {
+    .pdf-container {
+      padding-top: 150%; /* Taller aspect ratio for better readability on small screens */
+    }
+  }
+  
